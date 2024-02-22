@@ -107,12 +107,12 @@ public Action SetReadyClient(int client, int args) {
 		{
 			player_ReadyStatus[client] = 1;
 			PlusPlayerInRM();
-			PrintHintTextToAll("%d of 2 is ready. If you want unready, write in chat !ur", ReadyPlayersInMM);
+			PrintHintTextToAll("%d of 8 is ready. If you want unready, write in chat !ur", ReadyPlayersInMM);
 			char name[64];
 			GetClientName(client, name, sizeof(name));
 			PrintToChatAll("\x01[\x04CS:GO Relaunch\x01]: \x0B%s\x01 is \x04ready\x01!", name);
 			CS_SetClientClanTag(client, "Ready");
-			if(ReadyPlayersInMM == 2) {
+			if(ReadyPlayersInMM == 8) {
 				StartMatch();
 			}
 		}
@@ -131,7 +131,7 @@ public Action SetUnReadyClient(int client, int args) {
 		{
 			player_ReadyStatus[client] = 0;
 			MinusPlayerInRM();
-			PrintHintTextToAll("%d of 2 is ready. If you want ready, write in chat !r", ReadyPlayersInMM);
+			PrintHintTextToAll("%d of 8 is ready. If you want ready, write in chat !r", ReadyPlayersInMM);
 			char name[64];
 			GetClientName(client, name, sizeof(name));
 			PrintToChatAll("\x01[\x04CS:GO Relaunch\x01]: \x0B%s\x01 is \x02unready\x01!", name);
