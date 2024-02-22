@@ -2,7 +2,7 @@
 This plugin makes PUG server
 
 # Installation
-1. Compile all files in the *[GameRoot]\csgo\addons\sourcemod\scripting* folder
+1. Compile all files in the *scripting* folder
 2. Add compiled files to folder named *[GameRoot]\csgo\addons\sourcemod\plugin*
 3. Copy folder in archive named ``cfg`` and put him to *[GameRoot]\csgo*
 
